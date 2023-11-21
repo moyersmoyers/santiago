@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Rubik:wght@300&display=swap');
+
+body{
+	font-family: "Rubik", arial, sans-serif;
+	font-size: 14px;
+}
+
+button{
+	outline: none !important;
+   box-shadow: none !important;
+}
+
+.line{
+	display: grid;
+	justify-items: center;
+}
+
+.line hr{
+	width: 5rem;
+}
+
+.page-section{
+	padding: 11rem 0 2rem 0;
+}
+
+.section-heading{
+	padding-bottom: 1.4rem;
+	font-size: 2.5rem;
+}
+
+.lead{
+	font-size: 14px !important;
+}
+
+/* LOADER START */
+.no-scroll {
+   overflow: hidden;
+}
+
+.heading-font{
+	font-family: "Playfair Display", times, serif;
+}
+
+.loader {
+	z-index: 2000;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background: #fff;
+	display: flex;	
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.loader:after {
+	content: " ";
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #222;
+	border-color: #222 transparent #222 transparent;
+	animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* LOADER END */
+
+
+
+/* HEADER SWIPER START */
+.head {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: #343a40;
+	padding: 4rem 0 1rem;
+}
+
+.head p{
+	margin: 0;
+}
+/* HEADER END */
+
+
+/* NAVBAR START */
+.navbar{
+	transition: all 0.3s;
+}
+
+.nav-scrolled{
+	background-color: #1B1B1E;
+}
+
+.navbar-toggler span{
+	text-decoration: none; 
+}
+
+.navbar_ul{
+	background-color: red;
+}
+
+.offcanvas{
+	transition: all 0.2s;
+}
+
+.offcanvas:after{
+	content: '';
+}
+/* NAVBAR END */
+
+
+/* ROOM START */
+.card-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 10px;
+}
+
+.card{
+	width: 22.5rem !important;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.card:hover{
+	transform: scale(1.05);
+}
+
+.card img{
+	height: 17rem !important;
+}
+/* ROOM END */
+
+
+/* FOOTER START */
+.address{
+	text-decoration: none;
+}
+
+.address p small:hover{
+	color: #fff;
+}
+
+footer small, footer .social-icon{
+	color: #aaa;
+}
+/* FOOTER END */
+
+
+@media (max-width: 1199px){
+	.room-img{
+		height: 450px;
+	}
+}
+
+@media (max-width: 991px){
+	.room-img{
+		height: 350px;
+	}
+}
+
+@media (max-width: 767px){
+	.room-img{
+		padding-bottom: 20px;
+    	height: 450px;
+	}
+}
