@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Villa De Castro Garden & Resort</title>
+		<!-- BOOTSTRAP -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+		<!-- OWL CAROUSEL -->
+		<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css"/>
+		<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.css"/>
+		<!-- SWIPER -->
+		<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css"/>
+		<!-- AOS -->
+		<link rel="stylesheet" href="css/aos/aos.css">
+		<!-- GRIDGALLERY -->
+		<link rel="stylesheet" href="css/gridgallery/grid-gallery.css"/>
+		<!-- FANCYBOX -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+		<!-- STYLE -->
+		<link rel="stylesheet" type="text/css" href="css/rooms.css">
+	</head>
+	<body class="no-scroll">
+
+		<!-- PRELOADER -->
+		<div class="loader"></div>
+		
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+			<div class="container">
+				<a class="navbar-brand" href="#">LOGO</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border:none;">
+			    	<span class="navbar-toggler-icon"></span>
+			    </button>
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Villa De Castro Garden & Resort</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav nav-underline ms-auto mb-2 my-2">
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="index.html">Home</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="about.html">About</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link active" aria-current="page" href="rooms.html">Accomodations</a>
+				    		</li>
+				    		<!-- <li class="nav-item">
+				    			<a class="nav-link" href="amenities.html">Amenities</a>
+				    		</li> -->
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="gallery.html">Gallery</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="contactus.html">Contact</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="inquiry.html">Inquiry</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="testimonial.html">Feedback</a>
+				    		</li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="reservation.html">Reserve Now</a>
+				    		</li>
+			    		</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- HEADER -->
+		<header class="head">
+			<div class="container text-center">
+				<h3 class="heading-font text-white" data-aos="fade-down">Accomodations</h3>
+				<div class="line text-white">
+					<hr data-aos="fade-up" data-aos-delay="100">
+				</div>
+			</div>
+	    </header>
+
+	    <section class="page-section">
+	    	<div class="container">
+	    		<div class="card-container">
+					<div class="card text-center regular" data-index="0">
+					  <img src="img/court.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Regular Room w/ AC</h5>
+					    <p class="card-text">Example: This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.</p>
+					    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#regular-modal">See More</a>
+					  </div>
+					</div>
+					<div class="card text-center big" data-index="1">
+					  <img src="img/wqe.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Big Room w/ 2 AC</h5>
+					    <p class="card-text">Example: This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.</p>
+					    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#big-modal">See More</a>
+					  </div>
+					</div>
+					<div class="card text-center public" data-index="2">
+					  <img src="img/qw.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Public Pool</h5>
+					    <p class="card-text">Example: Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.</p>
+					    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#public-modal">See More</a>
+					  </div>
+					</div>
+					<div class="card text-center private" data-index="3">
+					  <img src="img/parking.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Private Pool</h5>
+					    <p class="card-text">Example: Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
+					    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#private-modal">See More</a>
+					  </div>
+					</div>
+	    		</div>
+	    	</div>
+	    </section>
+
+	    <!-- ROOM SELECT MODAL -->
+		<!-- <div class="modal fade room-select-modal" id="room-select-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Room Selection</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- REGULAR MODAL -->
+		<div class="modal fade regular-modal" id="regular-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Regular Room w/ AC</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>PHP 1,500</p>
+						<p>- 12 hrs (Good for 2 pax)</p>
+						<p>- Add PHP 250/additional pax</p>
+						<p>- Add PHP 200/hr for extension</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<a href="reservation.html" class="btn btn-success">Reserve Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BIG MODAL -->
+		<div class="modal fade big-modal" id="big-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Big Room w/ 2 AC</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>PHP 5,000</p>
+						<p>- 12 hrs (10 pax. No entrance fee)</p>
+						<p>- Add PHP 250/additional pax</p>
+						<p>- Add PHP 500/hr for extension</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<a href="reservation.html" class="btn btn-success">Reserve Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PUBLIC MODAL -->
+		<div class="modal fade public-modal" id="public-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Public Pool</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Swimming Time</th>
+									<th>Check Out Time</th>
+									<th>Kids</th>
+									<th>Adult</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Day (8am - 4:30pm)</td>
+									<td>5pm</td>
+									<td>PHP 100</td>
+									<td>PHP 130</td>
+								</tr>
+								<tr>
+									<td>Night (6pm - 11:30pm)</td>
+									<td>12mn</td>
+									<td>PHP 100</td>
+									<td>PHP 130</td>
+								</tr>
+								<tr>
+									<td>Overnight (7pm - 3:30am)</td>
+									<td>4am</td>
+									<td>PHP 120</td>
+									<td>PHP 180</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Kids 2.5ft & below - FREE</p>
+						<p>
+							<span><b>Big Cottage</b> (15 - 20 PAX)</span><br>
+							- With Unli Karaoke &nbsp; <b>PHP 1300</b><br>
+							- Without Karaoke &nbsp; <b>PHP 1000</b>
+						</p>
+						<p>
+							<span><b>Cabana</b> (10 - 12 PAX) &nbsp; <b>PHP 600</b></span><br>
+							- With 2 Public Karaoke &nbsp; <b>PHP 5/song</b>
+						</p>
+						<p>
+							<span><b>Amenities</b>: </span><br>
+							- 2 Kiddie Pool, 1 Adult Pool, Grill<br>
+							No corkage on liquor and foods
+						</p>
+						<p>
+							<b>NO PAY NO ENTRY</b><br>
+						</p>
+						<p>
+							Note: <u>PET DOGS ARE STRICTLY NOT ALLOWED</u>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<a href="reservation.html" class="btn btn-success">Reserve Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PRIVATE MODAL -->
+		<div class="modal fade private-modal" id="private-modal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title fs-5" id="exampleModalLabel">Private Pool</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Swimming Time</th>
+									<th>Check Out Time</th>
+									<th>Rate</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										Day (8am - 4:30pm)<br>
+										- Max. 20 PAX, Excess/hd 
+									</td>
+									<td>5pm</td>
+									<td>
+										PHP 7000<br>
+										PHP 150
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Overnight (8pm - 4:30am)<br>
+										- Max. 20 PAX, Excess/hd 
+									</td>
+									<td>5am</td>
+									<td>
+										PHP 8000<br>
+										PHP 180
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Straight (21 hrs)<br>
+										- Max. 20 PAX, Excess/hd 
+									</td>
+									<td></td>
+									<td>
+										PHP 15000<br>
+										PHP 300
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">Extension (Whenever possible)</td>
+									<td>PHP 700/hr</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Kids 2.5ft & below - FREE</p>
+						<p>
+							<b>Amenities</b>: <br>
+							- Private Pool (kids are not allowed to access public kiddie pool)<br>
+							- 2 Rooms with AC (8 Beds), Videoke, Kitchen (Only stove with LPG provided)<br>
+							No corkage on liquor and foods
+						</p>
+						<p>
+							<b>50% DEPOSIT FOR RESERVATION</b><br>
+							<b>NO PAY NO ENTRY</b><br>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<a href="reservation.html" class="btn btn-success">Reserve Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="container-fluid px-5 bg-dark">
+			<footer class="py-5 text-white">
+				<div class="row mx-5 text-start">
+					<div class="col-lg-4 col-md-6 mb-3">
+						<ul class="nav flex-column">
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="index.html" class="nav-link p-0 text-light">Home</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="about.html" class="nav-link p-0 text-light">About Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="rooms.html" class="nav-link p-0 text-light">Accomodations</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="gallery.html" class="nav-link p-0 text-light">Gallery</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="contactus.html" class="nav-link p-0 text-light">Contact Us</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="inquiry.html" class="nav-link p-0 text-light">Inquiry</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="testimonial.html" class="nav-link p-0 text-light">Feedback</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="reservation.html" class="nav-link p-0 text-light">Reserve Now</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-3">
+						<ul class="nav flex-column">
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Terms and Condition</a></li>
+							<li class="nav-item mb-3" data-aos="fade-up"><a href="#" class="nav-link p-0 text-light">Privacy and Policy</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-3 text-light">
+	            		<div class="col-12 pb-3">
+	            			<!-- <i class="fa-solid fa-location-dot fa-lg"></i> --> <p data-aos="fade-up">Address</p>
+	            			<a href="https://www.google.com/maps/place/Villa+De+Castro+Resort/@14.4943732,121.1754997,18z/data=!3m1!4b1!4m10!3m9!1s0x3397c3fc01e3686f:0x32cfcdab8ae035dd!5m3!1s2023-11-25!4m1!1i2!8m2!3d14.4943706!4d121.1767872!16s%2Fg%2F1tdggsnz?entry=ttu" target="_blank" class="address"><p data-aos="fade-up"><small>0001 Mla. East Road, Palangoy, Binangonan, Rizal</small></p></a>
+	            		</div>
+	            		<div class="col-12 pb-3" >
+	            			<!-- <i class="fa-solid fa-phone fa-lg"></i> --> <p data-aos="fade-up">Contact</p>
+	            			<p data-aos="fade-up">
+	            				<small>Mobile: 09162967411</small><br>
+	            				<small>Tel: (02)87882152, (02)85707204</small><br>
+	            				<small>Email: villa_decastro_resort@yahoo.com.ph</small>
+	            			</p>
+	            			<p></p>
+	            		</div>
+	            		<div class="col-12">
+	            			<p data-aos="fade-up">Social Media</p>
+	            			<p data-aos="fade-up">
+	            				<a href="https://www.facebook.com/VillaDeCastroGardenResort" target="_blank"><i class="fa-brands fa-facebook fa-lg social-icon"></i></a>
+	            			</p>
+	            		</div>
+					</div>
+				</div>
+				<div class="text-center pt-4 mt-4 border-top">
+					<p class="copyright">Copyright &copy; <a href="#" class="text-white">Villa De Castro Garden & Resort</a> 2023. All rights reserved.</p>
+				</div>
+			</footer>
+		</div>
+
+		<!-- JQUERY -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+		<!-- BOOTSTRAP -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<!-- FONTAWESOME -->
+		<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+		<!-- OWL CAROUSEL -->
+		<script src="js/owlcarousel/owl.carousel.min.js"></script>
+		<!-- SWIPER -->
+		<script src="js/swiper/swiper-bundle.min.js"></script>
+		<!-- AOS -->
+		<script src="js/aos/aos.js"></script>
+		<!-- GRIDGALLERY -->
+		<script type="text/javascript" src="js/gridgallery/grid-gallery.js"></script>
+		<!-- FANCYBOX -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		<!-- SCRIPT -->
+		<!-- <script type="text/javascript" src="js/rooms.js"></script> -->
+		<script>
+			window.addEventListener('load', () =>{
+			    document.querySelector('.loader').style.display = "none";
+			    document.body.classList.remove('no-scroll');
+			});
+
+			AOS.init({
+			    once: true
+			});
+
+			$('.card').click(function(e){
+			    e.preventDefault();
+			    const trgt = e.target;
+			    if(trgt.parentNode.classList.contains("regular") || trgt.parentNode.parentNode.classList.contains("regular")){
+			    	$('.regular-modal').modal('show');
+			    }
+			    else if(trgt.parentNode.classList.contains("big") || trgt.parentNode.parentNode.classList.contains("big")){
+			    	$('.big-modal').modal('show');
+			    }
+			    else if(trgt.parentNode.classList.contains("public") || trgt.parentNode.parentNode.classList.contains("public")){
+			    	$('.public-modal').modal('show');
+			    }
+			    else if(trgt.parentNode.classList.contains("private") || trgt.parentNode.parentNode.classList.contains("private")){
+			    	$('.private-modal').modal('show');
+			    }
+			});
+		</script>
+	</body>
+</html>
