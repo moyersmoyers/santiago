@@ -1,0 +1,17 @@
+table, .dataTables_scrollHeadInner{
+  width: 100% !important;
+}
+
+.table-container{
+  padding: 0 0.5rem;
+}
+
+.action{
+  font-size: 20px;
+  padding: 0 !important;
+  text-align: center;
+}
+
+.action a {
+  color: var(--bs-warning);
+}
