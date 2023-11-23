@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"></meta>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		<title>Villa De Castro Garden & Resort</title>
+		<title>Santiago Private Resort</title>
 		<!-- BOOTSTRAP -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -30,7 +30,7 @@
 			    </button>
 				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Villa De Castro Garden & Resort</h5>
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Santiago Private Resort</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body">
@@ -106,8 +106,13 @@
 		        					<label class="form-label" for="accomodation-select">Select your accomodation <span style="color: red">*</span></label>
 									<select class="form-select accomodation-select" id="accomodation-select">
 										<option selected disabled value=""></option>
-										<option value="regular">Regular Room w/ AC</option>
-										<option value="big">Big Room w/ 2 AC</option>
+										<option value="standard">Standard</option>
+										<option value="windmill">Windmill View</option>
+										<option value="lakeview">Lakeview Room</option>
+										<option value="family">Family Room</option>
+										<option value="king">King</option>
+										<option value="queen">Queen</option>
+										<option value="dorm">Dorm</option>
 										<!-- <option value="public">Public Pool</option>
 										<option value="private">Private Pool</option> -->
 									</select>
@@ -115,7 +120,7 @@
 		        				</div>
 								<div class="row pt-4 pe-0">
 			        				<div class="row pe-0 room-container">
-			        					<div class="card room-card regular col-lg-9 mb-3 pb-3">
+			        					<div class="card room-card standard col-lg-9 mb-3 pb-3">
 											<div class="row g-0">
 												<div class="col-md-3" style="height: 170px;">
 													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
@@ -124,15 +129,38 @@
 												</div>
 												<div class="col-md-9">
 													<div class="card-body">
-														<h4 class="card-title">Regular Room w/ AC</h4>
+														<h4 class="card-title">Standard</h4>
 														<div class="card-info row">
 															<div class="col-md-12">
 																<span class="private-room-description">Example: This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.</span>
-																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#standard-modal">Read More...</a>
 																<div class="private-room-details pt-3">
-																	<p>Price: <b>PHP <span class="price">1500</span></b> (12 hrs. Good for 2 pax.)</p>
-																	<p>Add <b>PHP 250</b>/additional pax</p>
-																	<p>Add <b>PHP 200</b>/hr for extension</p>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			2 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">1000</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">2000</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -144,40 +172,31 @@
 					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
 					        						<select class="form-select time-select" id="r1-time-select">
 														<option selected disabled value=""></option>
-														<option value="Day">Day</option>
-														<option value="Night">Night</option>
-														<option value="Overnight">Overnight</option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
 					        						</select>
 													<span class="select-time-error">This field is required.</span>
 												</div>
 												<div class="col-lg-3">
-					        						<label class="form-label" for="adult-select">Adult(s)</label>
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
 					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
 														<option value="1">1</option>
 														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
 					        						</select>
 												</div>
-												<!-- <div class="col-lg-3">
-					        						<label class="form-label" for="kids-select">Kid(s)</label>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
 					        						<select class="form-select kids-select" id="kids-select">
 														<option value="0">0</option>
 														<option value="1">1</option>
-					        						</select>
-												</div> -->
-												<div class="col-lg-3">
-													<label class="form-label" for="private-extra">Add extra (<b>PHP 250</b>/pax)</label>
-					        						<select class="form-select private-extra" id="extra">
-					        							<option value="0">0</option>
-					        							<option value="1">1</option>
-					        							<option value="2">2</option>
-					        							<option value="3">3</option>
-					        							<option value="4">4</option>
-					        							<option value="5">5</option>
-					        							<option value="6">6</option>
-					        							<option value="7">7</option>
-					        							<option value="8">8</option>
-					        							<option value="9">9</option>
-					        							<option value="10">10</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
 					        						</select>
 												</div>
 											<div class="col-lg-12 text-end pt-3">
@@ -186,24 +205,47 @@
 											</div>
 										</div>
 
-			        					<div class="card room-card big col-lg-9 mb-3 pb-3">
+			        					<div class="card room-card windmill col-lg-9 mb-3 pb-3">
 											<div class="row g-0">
 												<div class="col-md-3" style="height: 170px;">
 													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
-														<img src="img/wqe.jpg" class="img-fluid rounded-start" alt="...">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
 													</div>
 												</div>
 												<div class="col-md-9">
 													<div class="card-body">
-														<h4 class="card-title">Big Room w/ 2 AC</h4>
+														<h4 class="card-title">Windmill View</h4>
 														<div class="card-info row">
 															<div class="col-md-12">
 																<span class="private-room-description">Example: This room with balcony offers a double and single bed configuration, loft-type room. It can accommodate upto five guests and is perfect for a family or small groups. All rooms are accessible via stairs.</span>
 																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
 																<div class="private-room-details pt-3">
-																	<p>Price: <b>PHP <span class="price">5000</span></b> (10 pax. No entrance fee)</p>
-																	<p>Add <b>PHP 250</b>/additional pax</p>
-																	<p>Add <b>PHP 500</b>/hr for extension</p>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			2 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">1300</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">2300</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -212,53 +254,34 @@
 											</div>
 											<div class="row g-2">
 												<div class="col-lg-3">
-					        						<label class="form-label" for="r2-time-select">Select Time <span style="color: red">*</span></label>
-					        						<select class="form-select time-select" id="r2-time-select">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
 														<option selected disabled value=""></option>
-														<option value="Day">Day</option>
-														<option value="Night">Night</option>
-														<option value="Overnight">Overnight</option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
 					        						</select>
 													<span class="select-time-error">This field is required.</span>
 												</div>
 												<div class="col-lg-3">
-					        						<label class="form-label" for="adult-select">Adult(s)</label>
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
 					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
 														<option value="1">1</option>
 														<option value="2">2</option>
 														<option value="3">3</option>
 														<option value="4">4</option>
 														<option value="5">5</option>
-														<option value="6">6</option>
-														<option value="7">7</option>
-														<option value="8">8</option>
-														<option value="9">9</option>
-														<option value="10">10</option>
 					        						</select>
 												</div>
-												<!-- <div class="col-lg-3">
-					        						<label class="form-label" for="kids-select">Kid(s)</label>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
 					        						<select class="form-select kids-select" id="kids-select">
 														<option value="0">0</option>
 														<option value="1">1</option>
 														<option value="2">2</option>
 														<option value="3">3</option>
-					        						</select>
-												</div> -->
-												<div class="col-lg-3">
-													<label class="form-label" for="private-extra">Add extra (<b>PHP 250</b>/pax)</label>
-					        						<select class="form-select private-extra" id="extra">
-					        							<option value="0">0</option>
-					        							<option value="1">1</option>
-					        							<option value="2">2</option>
-					        							<option value="3">3</option>
-					        							<option value="4">4</option>
-					        							<option value="5">5</option>
-					        							<option value="6">6</option>
-					        							<option value="7">7</option>
-					        							<option value="8">8</option>
-					        							<option value="9">9</option>
-					        							<option value="10">10</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
 					        						</select>
 												</div>
 											<div class="col-lg-12 text-end pt-3">
@@ -266,6 +289,432 @@
 											</div>
 											</div>
 										</div>
+
+										<div class="card room-card lakeview col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">Lakeview Room</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Example: Our Deluxe Pool-Side Room can accommodate from three up to five guests. It has double beds and single bed configuration. This room gives our guests better access to swimming pools and is ideal for those who want to spend more time under the sun. Located near the Main Swimming Pool.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			2 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">1500</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">2500</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+											<div class="col-lg-12 text-end pt-3">
+												<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+											</div>
+											</div>
+										</div>
+
+										<div class="card room-card family col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">Family Room</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Example: Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			4 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">2000</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">4000</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+											<div class="col-lg-12 text-end pt-3">
+												<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+											</div>
+											</div>
+										</div>
+
+										<div class="card room-card king col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">King</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Example: Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			4 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">3000</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">5500</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+											<div class="col-lg-12 text-end pt-3">
+												<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+											</div>
+											</div>
+										</div>
+
+										<div class="card room-card queen col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">Queen</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Example: Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			4 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">3000</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">5500</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+											<div class="col-lg-12 text-end pt-3">
+												<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+											</div>
+											</div>
+										</div>
+
+										<div class="card room-card dorm col-lg-9 mb-3 pb-3">
+											<div class="row g-0">
+												<div class="col-md-3" style="height: 170px;">
+													<div class="fotorama" data-width="190" data-height="150" data-allowfullscreen="true">
+														<img src="img/court.jpg" class="img-fluid rounded-start" alt="...">
+													</div>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h4 class="card-title">Dorm</h4>
+														<div class="card-info row">
+															<div class="col-md-12">
+																<span class="private-room-description">Example: Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</span>
+																<a href="#" class="private-read-more" data-bs-toggle="modal" data-bs-target="#room-modal">Read More...</a>
+																<div class="private-room-details pt-3">
+																	<div class="row">
+																		<div class="col-lg-2">
+																			Capacity:
+																		</div>
+																		<div class="col-lg-10">
+																			8 people
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-lg-2">
+																			<span>Rates: </span>
+																		</div>
+																		<div class="col-lg-5 time10">
+																			<span>PHP <span class="price">4000</span> - 10 hrs</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 200</span><br>
+																			<span>Kids - PHP 150</span>
+																		</div>
+																		<div class="col-lg-5 time22">
+																			<span>PHP <span class="price">7500</span> - 22 hrs</span><br>
+																			<span>(Free Breakfast)</span><br>
+																			<span><b>Extra pax additional charge:</b></span><br>
+																			<span>Adult - PHP 350</span><br>
+																			<span>Kids - PHP 300</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row g-2">
+												<div class="col-lg-3">
+					        						<label class="form-label" for="r1-time-select">Select Time <span style="color: red">*</span></label>
+					        						<select class="form-select time-select" id="r1-time-select">
+														<option selected disabled value=""></option>
+														<option value="10">10 hrs</option>
+														<option value="22">22 hrs</option>
+					        						</select>
+													<span class="select-time-error">This field is required.</span>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="adult-select">Add Extra Adult(s)</label>
+					        						<select class="form-select adult-select" id="adult-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+												<div class="col-lg-3">
+					        						<label class="form-label" for="kids-select">Add Extra Kid(s)</label>
+					        						<select class="form-select kids-select" id="kids-select">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+					        						</select>
+												</div>
+											<div class="col-lg-12 text-end pt-3">
+												<a href="#" class="btn btn-primary select-this-room" style="font-size: 14px">Reserve</a>
+											</div>
+											</div>
+										</div>
+
 			        				</div>
 								</div>
 	        				</div>
@@ -347,7 +796,7 @@
 	    			<div class="form-steps">
 	        			<div class="row g-4">
 	        				<div class="col-md-12">
-								<p><b>Important Note:</b> You may skip this part.</p>
+								<p><b>Important Note:</b> You may skip this part but you need to send a screenshot of payment within 5 days after registration.</p>
 	        				</div>
 	        				<div class="col-md-12">
 								<div class="form-floating">
@@ -364,12 +813,12 @@
 									<div class="payment-info">
 										<p>Kindly send your payment to the number below:</p>
 										<p class="gcash">
-											Account Number: <span class="gcash-number">09162967411</span><br>
-											Account Name: <span class="gcash-name">Rogelio LC</span>
+											Account Number: <span class="gcash-number">09123456789</span><br>
+											Account Name: <span class="gcash-name">Juan Dela Cruz</span>
 										</p>
 										<p class="bdo">
-											Account Number: <span class="bdo-number">0245-0557-65</span><br>
-											Account Name: <span class="bpi-name">Rogelio L De Castro</span>
+											Account Number: <span class="bdo-number">0123-4567-89</span><br>
+											Account Name: <span class="bpi-name">Elon Musk</span>
 										</p>
 										<p>Also, please send the screenshot of your payment: <span style="color:red;">*</span></p>
 	  									<input class="insert-img" type="file" id="formFile">
@@ -426,7 +875,6 @@
 							</div>
 	        			</div>
 	    			</div>
-	        	
     		</div>
 	    </section>
 
@@ -450,19 +898,21 @@
 		</div>
 
 	    <!-- ROOM MODAL -->
-		<div class="modal fade room-modal" id="room-modal" tabindex="-1">
+		<div class="modal fade standard-modal" id="standard-modal" tabindex="-1">
 			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2 class="modal-title" id="exampleModalLabel">Luxury Room</h2>
+						<h2 class="modal-title" id="exampleModalLabel">Standard</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<p class="room-description-modal">Our grandest of all the rooms fit for Kings and Queens, located in White House. It features two queen-sized beds, LCD TV and an ante room, perfect for entertaining visitors. The sofa bed in the ante room can be used for additional bed space. Our Premium Suite Room's spacious bathroom features a bathtub and two showers, located in the White House, gate4 and accessible via stairs. Expect staircases going to the swimming pool and restaurant area.</p>
-						<p>Room Size: 20sqm</p>
-						<p>Max. Capacity: 6 people</p>
-						<p>Bed Configuration: 1 Queen Size, 2 Single Beds, and 2 Bunk Beds</p>
-						<p>Room Amenities: Free WiFi, Cable TV, Private Bathroom with shower, towels, and toiletries, Air Conditioner, and Mini Bar</p>
+						<p class="room-description-modal">Example: This room can accommodate up to two persons, rooms are accessible via stairs and near to the function rooms.</p>
+						<p>Capacity: 2 people</p>
+						<div class="row">
+							<div class="col-lg-2">Available Rates:</div>
+							<div class="col-lg-5"></div>
+							<div class="col-lg-5"></div>
+						</div >
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -604,27 +1054,26 @@
 					<div class="col-lg-4 col-md-6 mb-3 text-light">
 	            		<div class="col-12 pb-3">
 	            			<!-- <i class="fa-solid fa-location-dot fa-lg"></i> --> <p >Address</p>
-	            			<a href="https://www.google.com/maps/place/Villa+De+Castro+Resort/@14.4943732,121.1754997,18z/data=!3m1!4b1!4m10!3m9!1s0x3397c3fc01e3686f:0x32cfcdab8ae035dd!5m3!1s2023-11-25!4m1!1i2!8m2!3d14.4943706!4d121.1767872!16s%2Fg%2F1tdggsnz?entry=ttu" target="_blank" class="address"><p data-aos="fade-up"><small>0001 Mla. East Road, Palangoy, Binangonan, Rizal</small></p></a>
+	            			<a href="https://www.google.com/maps/place/Santiago+Private+Resort/@14.4330633,121.3395198,17z/data=!4m19!1m8!3m7!1s0x3397e8d89777bedb:0xdd45ba3c4061a973!2sSan+Antonio+Feeder+Rd,+Pililla,+Rizal!3b1!8m2!3d14.4335465!4d121.3386186!16s%2Fg%2F11fnb0b5fn!3m9!1s0x3397e9d276caace9:0xc0da47004fface65!5m3!1s2023-11-25!4m1!1i2!8m2!3d14.4328598!4d121.3451315!16s%2Fg%2F11tfwpfjnl?entry=ttu" target="_blank" class="address"><p data-aos="fade-up"><small>San Antonio Feeder Rd, Quisao, Pililla, Rizal</small></p></a>
 	            		</div>
 	            		<div class="col-12 pb-3" >
 	            			<!-- <i class="fa-solid fa-phone fa-lg"></i> --> <p >Phone</p>
 	            			<p >
-	            				<small>Mobile: 09162967411</small><br>
-	            				<small>Tel: (02)87882152, (02)85707204</small><br>
-	            				<small>Email: villa_decastro_resort@yahoo.com.ph</small>
+	            				<small>Mobile: 09338113088</small><br>
+	            				<small>Email: santiagoprivateresort@gmail.com</small>
 	            			</p>
 	            			<p></p>
 	            		</div>
 	            		<div class="col-12">
 	            			<p >Social Media</p>
 	            			<p >
-	            				<a href="https://www.facebook.com/VillaDeCastroGardenResort" target="_blank"><i class="fa-brands fa-facebook fa-lg social-icon"></i></a>
+	            				<a href="https://www.facebook.com/santiagoprivateresort" target="_blank"><i class="fa-brands fa-facebook fa-lg social-icon"></i></a>
 	            			</p>
 	            		</div>
 					</div>
 				</div>
 				<div class="text-center pt-4 mt-4 border-top">
-					<p class="copyright">Copyright &copy; <a href="#" class="text-white">Villa De Castro Garden & Resort</a> 2023. All rights reserved.</p>
+					<p class="copyright">Copyright &copy; <a href="https://www.facebook.com/santiagoprivateresort" target="_blank" class="text-white">Santiago Private Resort</a> 2023. All rights reserved.</p>
 				</div>
 			</footer>
 		</div>
