@@ -10,16 +10,26 @@ AOS.init({
 $('.card').click(function(e){
     e.preventDefault();
     const trgt = e.target;
-    if(trgt.parentNode.classList.contains("regular") || trgt.parentNode.parentNode.classList.contains("regular")){
-        $('.regular-modal').modal('show');
+    
+    if(trgt.parentNode.classList.contains("standard") || trgt.parentNode.parentNode.classList.contains("standard")){
+        $('.standard-modal').modal('show');
     }
-    else if(trgt.parentNode.classList.contains("big") || trgt.parentNode.parentNode.classList.contains("big")){
-        $('.big-modal').modal('show');
+    else if(trgt.parentNode.classList.contains("windmill") || trgt.parentNode.parentNode.classList.contains("windmill")){
+        $('.windmill-modal').modal('show');
     }
-    else if(trgt.parentNode.classList.contains("public") || trgt.parentNode.parentNode.classList.contains("public")){
-        $('.public-modal').modal('show');
+    else if(trgt.parentNode.classList.contains("lakeview") || trgt.parentNode.parentNode.classList.contains("lakeview")){
+        $('.lakeview-modal').modal('show');
     }
-    else if(trgt.parentNode.classList.contains("private") || trgt.parentNode.parentNode.classList.contains("private")){
-        $('.private-modal').modal('show');
+    else if(trgt.parentNode.classList.contains("family") || trgt.parentNode.parentNode.classList.contains("family")){
+        $('.family-modal').modal('show');
+    }
+    else if(trgt.parentNode.classList.contains("king") || trgt.parentNode.parentNode.classList.contains("king")){
+        $('.king-modal').modal('show');
+    }
+    else if(trgt.parentNode.classList.contains("queen") || trgt.parentNode.parentNode.classList.contains("queen")){
+        $('.queen-modal').modal('show');
+    }
+    else if(trgt.parentNode.classList.contains("dorm") || trgt.parentNode.parentNode.classList.contains("dorm")){
+        $('.dorm-modal').modal('show');
     }
 });
