@@ -78,8 +78,7 @@ function resetItems(){
     $('#adult-select').get(0).selectedIndex = 0;
     $('#kids-select').get(0).selectedIndex = 0;
 
-    $('.room1').css('display', 'none');
-    $('.room2').css('display', 'none');
+    $('.room-card').css('display', 'none');
     $('.display-total').html('0');
 
     numOfRes = 0;
@@ -130,8 +129,7 @@ function getNumOfDaysDifference(){
 
 /* -------------------- ACCOMODATION -------------------- */
 $(document).ready(function(){
-    $('.regular').css('display', 'none');
-    $('.big').css('display', 'none');
+    $('.room-card').css('display', 'none');
 
     $('.display-check-in').html(moment().format('MM/DD/YYYY'));
     $('.display-check-out').html(moment().add(1, 'days').format('MM/DD/YYYY'));
@@ -142,13 +140,33 @@ $('.accomodation-select').change(function(){
     $('.accomodation-error').css('display', 'none');
     $('.select-time-error').css('display', 'none');
 
-    if($(this).val() === "regular"){
-        $('.regular').css('display', 'block');
-        $('.big').css('display', 'none');
+    if($(this).val() === "standard"){
+        $('.standard').css('display', 'block');
+        $('.standard').siblings().css('display', 'none');
     }
-    else{
-        $('.big').css('display', 'block');
-        $('.regular').css('display', 'none');
+    else if($(this).val() === "windmill"){
+        $('.windmill').css('display', 'block');
+        $('.windmill').siblings().css('display', 'none');
+    }
+    else if($(this).val() === "lakeview"){
+        $('.lakeview').css('display', 'block');
+        $('.lakeview').siblings().css('display', 'none');
+    }
+    else if($(this).val() === "family"){
+        $('.family').css('display', 'block');
+        $('.family').siblings().css('display', 'none');
+    }
+    else if($(this).val() === "king"){
+        $('.king').css('display', 'block');
+        $('.king').siblings().css('display', 'none');
+    }
+    else if($(this).val() === "queen"){
+        $('.queen').css('display', 'block');
+        $('.queen').siblings().css('display', 'none');
+    }
+    else if($(this).val() === "dorm"){
+        $('.dorm').css('display', 'block');
+        $('.dorm').siblings().css('display', 'none');
     }
 });
 
@@ -179,9 +197,14 @@ $('.select-this-room').click(function(e){
         roomName = $(this).parent().parent().siblings().find('.card-title').text();
         time = $(this).parent().siblings().find('.time-select').val();
         numOfAdult = $(this).parent().siblings().find('#adult-select').val();
-        extra = $(this).parent().siblings().find('#extra').val();
-        /*numOfKids = $(this).parent().siblings().find('#kids-select').val();*/
-        roomPrice = $(this).parent().parent().siblings().find('.price').text();
+        /*extra = $(this).parent().siblings().find('#extra').val();*/
+        numOfKids = $(this).parent().siblings().find('#kids-select').val();
+        if(time === "10"){
+            roomPrice = $(this).parent().parent().siblings().find(".time10").find('.price').text();
+        }
+        else if(time === "22"){
+            roomPrice = $(this).parent().parent().siblings().find(".time22").find('.price').text();
+        }
 
         /*$('.addons input:checked').each(function() {
             selectedAddOns.push($(this).attr('name'));
@@ -208,14 +231,25 @@ $('.time-select').change(function(){
 
 let isAddonsEmpty;
 function reserve(){
-    for(let i = 1; i < parseInt(numOfAdult); i++){
-        subtotal += 150;
+    if(time === "10"){
+        for(let i = 0; i < parseInt(numOfAdult); i++){
+            subtotal += 200;
+        }
+        for(let i = 0; i < parseInt(numOfKids); i++){
+            subtotal += 150;
+        }
     }
-    for(let i = 0; i < parseInt(extra); i++){
+    else if(time === "22"){
+        for(let i = 0; i < parseInt(numOfAdult); i++){
+            subtotal += 350;
+        }
+        for(let i = 0; i < parseInt(numOfKids); i++){
+            subtotal += 300;
+        }
+    }
+    
+    /*for(let i = 0; i < parseInt(extra); i++){
         subtotal += 250;
-    }
-    /*for(let i = 0; i < parseInt(numOfKids); i++){
-        subtotal += 100;
     }*/
     /*for(let i = 0; i < selectedAddOns.length; i++){
         if($.inArray('Karaoke', selectedAddOns) !== -1){
@@ -229,15 +263,15 @@ function reserve(){
 
     subtotal += parseInt(roomPrice * getNumOfDaysDifference());
     total += subtotal;
-    tempSelectedRoomsCottages.push({roomId, roomName, time, roomPrice, numOfAdult, numOfKids, selectedAddOns, subtotal});
+    tempSelectedRoomsCottages.push({roomId, roomName, time, roomPrice, numOfAdult, numOfKids, subtotal});
     newSelectedRoomsCottages = newSelectedRoomsCottages.concat(tempSelectedRoomsCottages);
 
-    if(tempSelectedRoomsCottages[0].selectedAddOns.length === 0){
+    /*if(tempSelectedRoomsCottages[0].selectedAddOns.length === 0){
         isAddonsEmpty = 'None';
     }
     else{
         isAddonsEmpty = tempSelectedRoomsCottages[0].selectedAddOns;
-    }
+    }*/
 
     let roomSummary = $(`<div class="room-item">
                         <div class="selected-room-name">
@@ -248,12 +282,15 @@ function reserve(){
                             Price Per Night: <span class="display-price">`+tempSelectedRoomsCottages[0].roomPrice+`</span>
                         </div>
                         <div class="selected-time">
-                            Time: <span class="display-time">`+tempSelectedRoomsCottages[0].time+`</span>
+                            Time: <span class="display-time">`+tempSelectedRoomsCottages[0].time+` hrs</span>
                         </div>
                         <div class="selected-number-of-people">
-                            Guest(s):
+                            Extra Guest(s):
                             <span class="selected-number-of-adult">
                                 <span class="display-adult">`+tempSelectedRoomsCottages[0].numOfAdult+`</span> Adult(s),
+                            </span>
+                            <span class="selected-number-of-kids">
+                                <span class="display-kids">`+tempSelectedRoomsCottages[0].numOfKids+`</span> Kids(s)
                             </span>
                         </div>
                         <div class="sub-total">
