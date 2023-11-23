@@ -1,0 +1,57 @@
+table, .dataTables_scrollHeadInner{
+  width: 100% !important;
+}
+
+.table-container{
+  padding: 0 0.5rem;
+}
+
+.action{
+  font-size: 20px;
+  padding: 0 !important;
+  text-align: center;
+}
+
+.action a:nth-child(1) {
+  color: var(--bs-success);
+}
+
+.action a:nth-child(2) {
+  color: var(--bs-warning);
+}
+
+.action a:nth-child(3) {
+  color: var(--bs-danger);
+}
+
+.approve{
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.approve-text{
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 13px;
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  z-index: 200;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.approve:hover .approve-text{
+  opacity: 1;
+}
+
+tbody tr td:nth-child(3){
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
